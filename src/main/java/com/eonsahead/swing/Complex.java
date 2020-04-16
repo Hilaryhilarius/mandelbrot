@@ -5,6 +5,9 @@
  */
 package com.eonsahead.swing;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author mshir
@@ -12,6 +15,7 @@ package com.eonsahead.swing;
 public class Complex {
     private final double real;
     private final double imag;
+    private final List<Complex> x = new ArrayList<>();
     public static void main(String[] args) {
         Complex w = new Complex(1,2);
     }
@@ -79,6 +83,13 @@ public class Complex {
         }
         boolean y = z.real < 50;
         return y;
+    }
+    public List<Complex> mli(){
+        boolean y = man(this);
+        if (y == true){
+            x.add(this);
+        }
+        return x;
     }
             
 
