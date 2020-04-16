@@ -72,17 +72,14 @@ public class Complex {
         return c;
     }
     
-    //public static double [] man(Complex c){
-        //for (int n = 0; n < 50; n++){
-        //    if ( n == 0){
-        //        Complex z = c;
-        //    }
-        //    else if (n < 50){
-        //        Complex z = c.ma1();
-        //    }
-        //    else{
-        //    Boolean f = z. < 50;
-        //}
-    //}
+    public static boolean man(Complex c){
+        Complex z = c;
+        for (int n = 0; n < 50; n++){
+            z = z.ma1();
+        }
+        boolean y = z.real < 50;
+        return y;
+    }
+            
 
 }
