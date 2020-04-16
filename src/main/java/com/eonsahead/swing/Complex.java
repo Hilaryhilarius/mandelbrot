@@ -52,14 +52,37 @@ public class Complex {
         double n2 = n.imag / d.real;
         return new Complex(n1,n2);
     }
+    public Complex sqr(){
+        double r = (this.real * this.real) - (this.imag * this.imag);
+        double i = (this.real * this.imag) + (this.imag * this.real);
+        return new Complex(r,i);
+    }
     public double mag(){
         double r = this.real * this.real;
         double i = this.imag * this.imag;
         return r + i;
     }
-    public static double [] man(){
-        Complex c = new Complex(a,b);
-        
-        
+    /**
+     * ma1 squares a complex number and adds it to itself
+     * @return Complex
+     */
+    public Complex ma1(){
+        Complex c = this.sqr();
+        c = this.add(c);
+        return c;
     }
+    
+    //public static double [] man(Complex c){
+        //for (int n = 0; n < 50; n++){
+        //    if ( n == 0){
+        //        Complex z = c;
+        //    }
+        //    else if (n < 50){
+        //        Complex z = c.ma1();
+        //    }
+        //    else{
+        //    Boolean f = z. < 50;
+        //}
+    //}
+
 }
